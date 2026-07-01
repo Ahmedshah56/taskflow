@@ -1,16 +1,71 @@
-# React + Vite
+# TaskFlow ⚡
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A clean, responsive task manager built to demonstrate modern React patterns — Hooks, Context API, custom hooks, and live REST API integration.
 
-Currently, two official plugins are available:
+**Live Demo → [taskflow-ahmed.netlify.app](https://taskflow54.netlify.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18** — functional components throughout
+- **useReducer + Context API** — global state management without Redux
+- **Custom Hooks** — `useTasks()`, `useDailyQuote()` (REST API)
+- **LocalStorage** — tasks persist across sessions
+- **Vite** — fast dev server and build tool
+- **CSS3** — fully responsive, mobile-first, no UI library
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Features
+
+- ✅ Add, complete, and delete tasks
+- 🎯 Priority levels — High, Medium, Low
+- 🔍 Filter by All / Active / Completed
+- 📊 Live completion progress arc dial
+- 💬 Daily motivational quote via REST API
+- 💾 LocalStorage persistence
+- 📱 Mobile responsive (360px and up)
+
+---
+
+## React Concepts Demonstrated
+
+| Concept | Where Used |
+|---|---|
+| `useState` | Form input, quote loading state |
+| `useEffect` | LocalStorage sync, API fetch on mount |
+| `useReducer` | Global task state (add, toggle, delete, filter) |
+| `useContext` | Consume TaskContext across components |
+| `useCallback` | Memoized action dispatchers |
+| `useMemo` | Filtered task list, context value |
+| Custom Hook | `useTasks()`, `useDailyQuote()` |
+| REST API | `fetch()` — quotable.io API |
+
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/Ahmedshah56/taskflow.git
+cd taskflow
+npm install
+npm run dev
+```
+
+---
+
+## Project Structure
+
+```
+src/
+└── App.jsx        # All components, context, hooks, and styles
+```
+
+---
+
+## Author
+
+**Syed Ahmed Ali Shah**  
+Frontend Developer · React · Tailwind CSS · JavaScript  
+[Portfolio](https://ahmedshah-portfolio.netlify.app) · [GitHub](https://github.com/Ahmedshah56) · [Fiverr](https://fiverr.com/pixelguru2)
